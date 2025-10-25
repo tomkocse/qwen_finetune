@@ -36,8 +36,8 @@ def main():
     # Step 1: process dataset
 
     # ~2GB. `train`, `validation`, `test` subsets
-    # only choose 1M training samples, to reduce preprocessing time. 1M takes ~1min
-    train_data = load_dataset("wmt/wmt17", "zh-en")["train"].take(1_000_0)
+    # only choose a few training samples, to reduce preprocessing time. It takes ~1min to preprocess 1M samples.
+    train_data = load_dataset("wmt/wmt17", "zh-en")["train"].take(10_000)
     valid_data = load_dataset("wmt/wmt17", "zh-en")["validation"]
 
     tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen3-0.6B-Base")
