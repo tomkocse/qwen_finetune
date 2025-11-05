@@ -1,5 +1,12 @@
 # Qwen Fine-tuning
 
+
+A simple example of fine-tuning Qwen-base on WMT En-Zh data.
+The base model can do MT already (try `demo.py` _without_ `--apply_chat_template`), but 
+(1) it does not use the chat template (try `demo.py` _with_ `--apply_chat_template`); (2) occasionally makes mistakes. 
+The goal of this fine-tuning is mainly learning the chat template.
+The MT performance should also be improved.
+
 ## Environments
 I use python=3.11 and the latest Huggingface, Pytorch versions.
 ```shell
