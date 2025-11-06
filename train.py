@@ -40,7 +40,7 @@ def main():
     train_data = load_dataset("wmt/wmt17", "zh-en")["train"].take(10_000)
     valid_data = load_dataset("wmt/wmt17", "zh-en")["validation"]
 
-    tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen2-1.5B-Base")
+    tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen2-1.5B")
 
     def reformat_mt_data(example: dict, src_lang: str, tgt_lang: str) -> dict:
         """
