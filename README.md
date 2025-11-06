@@ -21,8 +21,9 @@ pip install tensorboardX==2.6.4 tensorboard==2.20.0 -i https://pypi.tuna.tsinghu
 The pre-trained model checkpoint and the dataset will be saved to `HF_HOME`.
 So, ideally, everyone could share one copy of pre-trained model and data. Saves disk space bit.
 ```shell
-conda activate xxx
-export HF_HOME=xxx
+conda activate qwen_ft
+export HF_HOME=/data/share/
+export HF_ENDPOINT=https://hf-mirror.com
 ```
 - `demo.py`: for interaction. Load either the pre-trained model or the fine-tuned model, and 
 let the model translate an input sentence.
