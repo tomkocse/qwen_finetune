@@ -18,9 +18,7 @@ pip install tensorboardX==2.6.4 tensorboard==2.20.0
 ```
 
 ## Files
-- `./env.sh`: In order to run on my cluster, I have a list of environments to set up.
-The most important lines are the last two lines, which activates the conda environment and
-set up the huggingface cache directory.
+- `./env.sh`: In order to run on SLAI cluster, it is better to set up the environment.
 The pre-trained model checkpoint and the dataset will be saved to `HF_HOME`.
 So, ideally, everyone could share one copy of pre-trained model and data. Saves disk space bit.
 ```shell
