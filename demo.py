@@ -13,7 +13,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        "--model_name_or_path", type=str, default="Qwen/Qwen3-0.6B-Base",
+        "--model_name_or_path", type=str, default="Qwen/Qwen2-1.5B",
         help="Either the pre-trained Qwen model, or the dir to your fine-tuned checkpoint."
     )
     parser.add_argument(
@@ -35,7 +35,7 @@ def main():
     device = "cuda:0"
 
     # won't modify the tokenizer
-    tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen3-0.6B-Base")
+    tokenizer = AutoTokenizer.from_pretrained(args.model_name_or_path)
     model = AutoModelForCausalLM.from_pretrained(args.model_name_or_path).to(device)
 
     while True:
