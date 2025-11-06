@@ -11,5 +11,6 @@ module load git/2.27.1
 module load miniconda3/22.11.1-gy
 
 source ~/.bashrc
-conda activate /scratch/cmeng2/envs/qwen_ft
-export HF_HOME=/scratch/cmeng2/caches/qwen_ft
+conda activate qwen_ft
+export HF_HOME=/data/share/
+export HF_ENDPOINT=https://hf-mirror.com
