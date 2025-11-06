@@ -12,13 +12,12 @@ I use python=3.11 and the latest Huggingface, Pytorch versions.
 ```shell
 conda create -n qwen_ft python=3.11
 conda activate qwen_ft
-pip install torch==2.9.0 transformers==4.57.1 datasets==4.3.0 accelerate==1.11.0
+pip install torch==2.9.0 transformers==4.57.1 datasets==4.3.0 accelerate==1.11.0 -i https://pypi.tuna.tsinghua.edu.cn/simple
 # for visualizing train/dev loss curves
-pip install tensorboardX==2.6.4 tensorboard==2.20.0
+pip install tensorboardX==2.6.4 tensorboard==2.20.0 -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 ## Files
-- `./env.sh`: In order to run on SLAI cluster, it is better to set up the environment.
 The pre-trained model checkpoint and the dataset will be saved to `HF_HOME`.
 So, ideally, everyone could share one copy of pre-trained model and data. Saves disk space bit.
 ```shell
