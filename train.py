@@ -1,5 +1,5 @@
 """
-This script fine-tunes Qwen/Qwen3-0.6B-Base on wmt/wmt17 with the chat template.
+This script fine-tunes Qwen/Qwen2-1.5B-Base on wmt/wmt17 with the chat template.
 Note, this script has not been tested on multi-gpu setting.
 
 References: https://huggingface.co/learn/llm-course/chapter3/3
@@ -40,7 +40,7 @@ def main():
     train_data = load_dataset("wmt/wmt17", "zh-en")["train"].take(10_000)
     valid_data = load_dataset("wmt/wmt17", "zh-en")["validation"]
 
-    tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen3-0.6B-Base")
+    tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen2-1.5B-Base")
 
     def reformat_mt_data(example: dict, src_lang: str, tgt_lang: str) -> dict:
         """
